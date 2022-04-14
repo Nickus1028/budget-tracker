@@ -37,25 +37,22 @@ function saveRecord(record) {
 
 function uploadBudgetData() {
         
-        const transaction = db.transaction(['new_budget_data'], 'readwrite');
-  
-     
-        const budgetObjectStore = transaction.objectStore('new_budget_data');
-      
-        
-        const getAll = budgetObjectStore.getAll
-
+    const transaction = db.transaction(['new_budget_data'], 'readwrite');
+       
+    const budgetObjectStore = transaction.objectStore('new_budget_data');
+              
+    const getAll = budgetObjectStore.getAll
        
         getAll.onsuccess = function() {
      
-        if (getAll.result.length > 0) {
-          console.log("idb.js")
-            fetch('/api/transaction/bulk', {
-            method: 'POST',
-            body: JSON.stringify(getAll.result),
-            headers: {
-                Accept: 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
+            if (getAll.result.length > 0) {
+                console.log("idb.js")
+                fetch('/api/transaction/bulk', {
+                method: 'POST',
+                body: JSON.stringify(getAll.result),
+                headers: {
+                    Accept: 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
             }
         })
         .then(response => response.json())
