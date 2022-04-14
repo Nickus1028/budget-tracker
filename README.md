@@ -8,6 +8,7 @@ This application helps you track your budget both online and offline.
 ## Table of Contents
 
 * [Screenshot](#screenshot)
+* [URL](#url)
 * [Usage](#usage)
 * [Code](#code)
 * [License](#license)
@@ -16,12 +17,17 @@ This application helps you track your budget both online and offline.
 ## Screenshot
 ![Budget Tracker Screenshot](./assets/budget-tracker-screenshot.jpg)
 
+## URL
+https://frozen-escarpment-09006.herokuapp.com/
 
 ## Usage
 Can be used to plan your budget. You can add line items that are displayed both in a list and graph.
 
 ## Code
 * Javascript
+* HTML
+* CSS
+* Boostrap
 * Node.js
 * MongoDB
 * Mongoose
